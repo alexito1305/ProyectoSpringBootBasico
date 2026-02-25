@@ -20,7 +20,7 @@ import java.util.Optional;
 @RestController
 public class UsuarioController {
 
-    @Autowired
+   /* @Autowired
     UsuarioService usuarioService;
 
     @GetMapping("/usuarios")
@@ -70,5 +70,5 @@ public class UsuarioController {
         usuarioService.eliminarUsuario(id);
 
         return ResponseEntity.noContent().build();
-    }
+    }*/
 }

@@ -1,0 +1,25 @@
+<!-- Definición de los beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Habilitar el procesamiento de anotaciones -->
+    <context:annotation-config/>
+
+    <bean id="modelClassBean" class="com.ebac.modulo61.model.ModelClass" />
+
+    <bean id="serviceSetterClassBean" class="com.ebac.modulo61.service.ServiceSetterClass">
+        <property name="modelClass" ref="modelClassBean" />
+    </bean>
+
+    <bean id="serviceConstructorClassBean" class="com.ebac.modulo61.service.ServiceConstructorClass">
+        <constructor-arg ref="modelClassBean" />
+    </bean>
+
+    <bean id="serviceAnnotationClassBean" class="com.ebac.modulo61.service.ServiceAnnotationClass" />
+
+</beans>
